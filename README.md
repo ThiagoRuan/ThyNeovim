@@ -1,5 +1,4 @@
 # My Neovim
-___
 
 This is my own Neovim config. You can use it for free!
 
