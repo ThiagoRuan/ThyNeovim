@@ -54,4 +54,11 @@ vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally"
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 
+-- Copy file path
+vim.keymap.set("n", "<leader>fp", function()
+    local filePath = vim.fn.expand("%:~")
+    vim.fn.setreg("+", filePath)
+    print("File path copied to clipboard: " .. filePath)
+end, {desc = "Copy file path to clipboard"})
+
 
