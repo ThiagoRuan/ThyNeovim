@@ -22,13 +22,13 @@ vim.keymap.set("v", "p", '"_dp', opts)
 
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
-vim.keymap.set({ "n", "v", "i"}, "<C-s>", ":w<CR>")
+vim.keymap.set({ "n", "v", "i"}, "<C-s>", "<ESC>:w<CR>")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clear search hl", silent = true })
 
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "x", '"_x', opts)
+-- vim.keymap.set("n", "x", '"_x', opts)
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word cursor is on globally"})
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true, desc = "Makes file executable"})
